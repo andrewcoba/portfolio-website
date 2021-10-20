@@ -17,12 +17,13 @@ Text color (Dark Gray): #2b2b2b;
 }
 
 body {
-    font-family: 'Lato', sans-serif;
-    font-weight: 400;
-    font-size: 16px;
-    /*Sets the font size to 16px */
-    line-height: 1.6;
-    text-align: center;
+  font-family: 'Lato', sans-serif;
+  font-weight: 400;
+  font-size: 16px;
+
+  /* Sets the font size to 16px */
+  line-height: 1.6;
+  text-align: center;
 }
 
 h1 {
@@ -49,15 +50,14 @@ a:visited {
   color: var(--visited-color);
 }
 
-
-a:hover, a:focus {
+a:hover a:focus {
   /* No underlining when hovering over a link */
   text-decoration: none;
-  /*lets the mouse appear as a hand when hovering over the button */
+
+  /* lets the mouse appear as a hand when hovering over the button */
   cursor: pointer;
-  /*reduces the opacity of the button to 80% */
   opacity: 0.8;
-  }
+}
 
 a:active {
   /* selected link */
@@ -66,20 +66,26 @@ a:active {
 
 button {
   cursor: pointer;
-  /*reduces the opacity of the button to 80% */
+
+  /* reduces the opacity of the button to 80% */
   opacity: 0.8;
-  /*overwrites browser defaults and resets the border */
+
+  /* overwrites browser defaults and resets the border */
   border: none;
+
   /* takes the font from the outer container */
   font-family: inherit;
-  /*styles the background color, font color, and text decoration (underline,etc.) of the button */
+
+  /* styles the background color, font color, and text decoration (underline,etc.) of the button */
   background-color: var(--primary-color);
   color: white;
   text-decoration: none;
-  /*adds spacing to the button */
+
+  /* adds spacing to the button */
   padding: 10px;
   border-radius: 3px;
-  /*guves the button a bottom border with a width of 2px, a type of solid, and a color in RGBA format */
+
+  /* gives the button a bottom border with a width of 2px, a type of solid, and a color in RGBA format */
   border-bottom: 2px solid rgba(0, 0, 0, 0.3);
 }
 
@@ -113,10 +119,10 @@ button:hover {
 }
 
 .page-footer {
-    clear: both;
-    display: flex;
-    flex-direction: column;
-    text-align: center;
+  clear: both;
+  display: flex;
+  flex-direction: column;
+  text-align: center;
 }
 
 .page-header {
@@ -129,11 +135,10 @@ button:hover {
   flex: 0 1 200px;
 }
 
-.page-header__item:last-child{
+.page-header__item:last-child {
   flex-grow: 1;
   text-align: right;
 }
-
 
 .navigation-list {
   list-style-type: none;
@@ -164,36 +169,44 @@ button:hover {
     grid-template-columns: 1fr;
   }
 }
-@media all and (min-width: 500px) and (max-width: 750px){
+
+@media all and (min-width: 500px) and (max-width: 750px) {
   .grid {
     grid-template-columns: 1fr 1fr;
   }
 }
+
 @media all and (max-width: 750px) {
   .grid {
     grid-gap: 10px;
   }
+
   .grid__item:last-child {
     grid-column: auto / auto;
     grid-row: auto / auto;
   }
+
   h1 {
     font-size: 22px;
   }
 }
 
-.button, button {
+.button,
+button {
   /* overwrites browser defaults and resets the border */
   border: none;
   display: inline-block;
-  /*takes the font from the outer container */
+
+  /* takes the font from the outer container */
   font-family: inherit;
-  /*styles the button */
+
+  /* styles the button */
   background-color: var(--primary-color);
   color: white;
   text-decoration: none;
   padding: 10px;
   border-radius: 3px;
+
   /* width of the border, type, color */
   border-bottom: 2px solid rgba(0, 0, 0, 0.3);
   transition: 0.2s opacity;
@@ -208,16 +221,18 @@ button:focus,
 }
 
 .hobbies {
-  list-style-type: none
+  list-style-type: none;
 }
 
 @keyframes color-change {
   0% {
     fill: var(--one-color);
   }
+
   50% {
     fill: var(--two-color);
   }
+
   100% {
     fill: var(--three-color);
   }
@@ -231,6 +246,7 @@ button:focus,
   from {
     transform: translate(0, 50px);
   }
+
   to {
     transform: translate(200px, 50px);
   }
@@ -244,6 +260,7 @@ button:focus,
   from {
     transform: translate(446px, 48px);
   }
+
   to {
     transform: translate(100px, 48px);
   }
@@ -252,4 +269,5 @@ button:focus,
 .cloud-back {
   animation: 34s cloud-move-reverse infinite alternate linear;
 }
-/* I lost the opacity for the first button I did. That's because of the cascading effect, right? Would I have to rename the type or class of the first button to keep the desired effects?*/
+
+/* I lost the opacity for the first button I did. That's because of the cascading effect, right? Would I have to rename the type or class of the first button to keep the desired effects? */
