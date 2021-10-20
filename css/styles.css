@@ -270,4 +270,9 @@ button:focus,
   animation: 34s cloud-move-reverse infinite alternate linear;
 }
 
+.table {
+  margin-left: auto;
+  margin-right: auto;
+}
+
 /* I lost the opacity for the first button I did. That's because of the cascading effect, right? Would I have to rename the type or class of the first button to keep the desired effects? */
